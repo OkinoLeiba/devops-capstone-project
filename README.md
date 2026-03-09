@@ -26,7 +26,7 @@ This will install Python 3.9, make it the default, modify the bash prompt, creat
 After sourcing it you prompt should look like this:
 
 ```bash
-(venv) theia:project$
+(venv) theia:devops-capstone-project$
 ```
 
 ## Useful commands
