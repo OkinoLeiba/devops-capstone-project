@@ -63,7 +63,7 @@ spec:
     - name: args
       description: Arguments to pass to nose
       type: string
-      default: "-v --with-spec --spec-color-v --with-spec --spec-color"
+      default: "-v"
     - name: database_uri
       description: Database connection string
       type: string
@@ -81,6 +81,6 @@ spec:
         python -m pip install --upgrade pip wheel
         pip install -qr requirements.txt
         nosetests $(params.args)
-        fi
+        
 
 
