@@ -79,7 +79,7 @@ spec:
       - name: database_uri
         value: "sqlite:///test.db"
       - name: args
-        value: "-v --with-spec -spec-color"
+        value: "-v --with-spec --spec-color"
       runAfter:
         - clone
 
@@ -116,5 +116,8 @@ spec:
           oc get pods -l app=accounts
       runAfter:
         - build
+        
 
+
+        
         
