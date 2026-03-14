@@ -1,0 +1,178 @@
+[init : remove] Removing all files from /workspace/source ...
+
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + CHECKOUT_DIR=/workspace/output/
+[clone : clone] + '[' true '=' true ]
+[clone : clone] + cleandir
+[clone : clone] + '[' -d /workspace/output/ ]
+[clone : clone] + rm -rf '/workspace/output//*'
+[clone : clone] + rm -rf '/workspace/output//.[!.]*'
+[clone : clone] + rm -rf '/workspace/output//..?*'
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + git config --global --add safe.directory /workspace/output
+[clone : clone] + /ko-app/git-init '-url=https://github.com/okinoleiba/devops-capstone-project.git' '-revision=main' '-refspec=' '-path=/workspace/output/' '-sslVerify=true' '-submodules=true' '-depth=1' '-sparseCheckoutDirectories='
+[clone : clone] {"level":"info","ts":1773452689.5080433,"caller":"git/git.go:176","msg":"Successfully cloned https://github.com/okinoleiba/devops-capstone-project.git @ 1112bf50505599ce0f69c206c09d2d0b3210e174 (grafted, HEAD, origin/main) in path /workspace/output/"}
+[clone : clone] {"level":"info","ts":1773452690.1919408,"caller":"git/git.go:215","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
+[clone : clone] + cd /workspace/output/
+[clone : clone] + git rev-parse HEAD
+[clone : clone] + RESULT_SHA=1112bf50505599ce0f69c206c09d2d0b3210e174
+[clone : clone] + EXIT_CODE=0
+[clone : clone] + '[' 0 '!=' 0 ]
+[clone : clone] + git log -1 '--pretty=%ct'
+[clone : clone] + RESULT_COMMITTER_DATE=1773439693
+[clone : clone] + printf '%s' 1773439693
+[clone : clone] + printf '%s' 1112bf50505599ce0f69c206c09d2d0b3210e174
+[clone : clone] + printf '%s' https://github.com/okinoleiba/devops-capstone-project.git
+
+[lint : run-flake8] Collecting flake8
+[lint : run-flake8]   Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+[lint : run-flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.9/57.9 kB 20.2 MB/s eta 0:00:00
+[lint : run-flake8] Collecting pycodestyle<2.15.0,>=2.14.0
+[lint : run-flake8]   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+[lint : run-flake8] Collecting mccabe<0.8.0,>=0.7.0
+[lint : run-flake8]   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+[lint : run-flake8] Collecting pyflakes<3.5.0,>=3.4.0
+[lint : run-flake8]   Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+[lint : run-flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 kB 26.7 MB/s eta 0:00:00
+[lint : run-flake8] Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+[lint : run-flake8] Successfully installed flake8-7.3.0 mccabe-0.7.0 pycodestyle-2.14.0 pyflakes-3.4.0
+[lint : run-flake8] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[lint : run-flake8] 
+[lint : run-flake8] [notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[lint : run-flake8] [notice] To update, run: pip install --upgrade pip
+[lint : run-flake8] ./tests/test_routes.py:152:5: E303 too many blank lines (2)
+[lint : run-flake8] ./tests/test_routes.py:187:79: W292 no newline at end of file
+[lint : run-flake8] 1     E303 too many blank lines (2)
+[lint : run-flake8] 1     W292 no newline at end of file
+[lint : run-flake8] 2
+
+[tests : nosetests] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+[tests : nosetests] Collecting pip
+[tests : nosetests]   Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 67.8 MB/s eta 0:00:00
+[tests : nosetests] Requirement already satisfied: wheel in /usr/local/lib/python3.9/site-packages (0.44.0)
+[tests : nosetests] Collecting wheel
+[tests : nosetests]   Downloading wheel-0.46.3-py3-none-any.whl (30 kB)
+[tests : nosetests] Collecting packaging>=24.0
+[tests : nosetests]   Downloading packaging-26.0-py3-none-any.whl (74 kB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.4/74.4 kB 30.2 MB/s eta 0:00:00
+[tests : nosetests] Installing collected packages: pip, packaging, wheel
+[tests : nosetests]   Attempting uninstall: pip
+[tests : nosetests]     Found existing installation: pip 23.0.1
+[tests : nosetests]     Uninstalling pip-23.0.1:
+[tests : nosetests]       Successfully uninstalled pip-23.0.1
+[tests : nosetests]   Attempting uninstall: wheel
+[tests : nosetests]     Found existing installation: wheel 0.44.0
+[tests : nosetests]     Uninstalling wheel-0.44.0:
+[tests : nosetests]       Successfully uninstalled wheel-0.44.0
+[tests : nosetests] Successfully installed packaging-26.0 pip-26.0.1 wheel-0.46.3
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[tests : nosetests] Plugin decorator
+[tests : nosetests]   score: 99999
+[tests : nosetests]   (no help available)
+[tests : nosetests] 
+[tests : nosetests] Plugin capture
+[tests : nosetests]   score: 1600
+[tests : nosetests]   Output capture plugin. Enabled by default. Disable with ``-s`` or
+[tests : nosetests]   ``--nocapture``. This plugin captures stdout during test execution,
+[tests : nosetests]   appending any output captured to the error or failure output, should
+[tests : nosetests]   the test fail or raise an error.
+[tests : nosetests] 
+[tests : nosetests] Plugin failuredetail
+[tests : nosetests]   score: 1600
+[tests : nosetests]   Plugin that provides extra information in tracebacks of test
+[tests : nosetests]   failures.
+[tests : nosetests] 
+[tests : nosetests] Plugin xunit
+[tests : nosetests]   score: 1500
+[tests : nosetests]   This plugin provides test results in the standard XUnit XML format.
+[tests : nosetests] 
+[tests : nosetests] Plugin spec
+[tests : nosetests]   score: 1100
+[tests : nosetests]   Generate specification from test class/method names.
+[tests : nosetests] 
+[tests : nosetests] Plugin deprecated
+[tests : nosetests]   score: 1000
+[tests : nosetests]   Installs a DEPRECATED error class for the DeprecatedTest exception.
+[tests : nosetests]   Enabled by default.
+[tests : nosetests] 
+[tests : nosetests] Plugin skip
+[tests : nosetests]   score: 1000
+[tests : nosetests]   Plugin that installs a SKIP error class for the SkipTest exception.
+[tests : nosetests]   When SkipTest is raised, the exception will be logged in the skipped
+[tests : nosetests]   attribute of the result, 'S' or 'SKIP' (verbose) will be output, and
+[tests : nosetests]   the exception will not be counted as an error or failure.
+[tests : nosetests] 
+[tests : nosetests] Plugin multiprocess
+[tests : nosetests]   score: 1000
+[tests : nosetests]   Run tests in multiple processes. Requires processing module.
+[tests : nosetests] 
+[tests : nosetests] Plugin logcapture
+[tests : nosetests]   score: 500
+[tests : nosetests]   Log capture plugin. Enabled by default. Disable with --nologcapture.
+[tests : nosetests]   This plugin captures logging statements issued during test
+[tests : nosetests]   execution, appending any output captured to the error or failure
+[tests : nosetests]   output, should the test fail or raise an error.
+[tests : nosetests] 
+[tests : nosetests] Plugin coverage
+[tests : nosetests]   score: 200
+[tests : nosetests]   Activate a coverage report using Ned Batchelder's coverage module.
+[tests : nosetests] 
+[tests : nosetests] Plugin outputsave
+[tests : nosetests]   score: 100
+[tests : nosetests]   (no help available)
+[tests : nosetests] 
+[tests : nosetests] Plugin stopwatch
+[tests : nosetests]   score: 100
+[tests : nosetests]   (no help available)
+[tests : nosetests] 
+[tests : nosetests] Plugin figleafsections
+[tests : nosetests]   score: 100
+[tests : nosetests]   (no help available)
+[tests : nosetests] 
+[tests : nosetests] Plugin attributeselector
+[tests : nosetests]   score: 100
+[tests : nosetests]   Selects test cases to be run based on their attributes.
+[tests : nosetests] 
+[tests : nosetests] Plugin doctest
+[tests : nosetests]   score: 100
+[tests : nosetests]   Activate doctest plugin to find and run doctests in non-test
+[tests : nosetests]   modules.
+[tests : nosetests] 
+[tests : nosetests] Plugin profile
+[tests : nosetests]   score: 100
+[tests : nosetests]   Use this plugin to run tests using the hotshot profiler.
+[tests : nosetests] 
+[tests : nosetests] Plugin id
+[tests : nosetests]   score: 100
+[tests : nosetests]   Activate to add a test id (like #1) to each test name output.
+[tests : nosetests]   Activate with --failed to rerun failing tests only.
+[tests : nosetests] 
+[tests : nosetests] Plugin allmodules
+[tests : nosetests]   score: 100
+[tests : nosetests]   Collect tests from all python modules.
+[tests : nosetests] 
+[tests : nosetests] Plugin collect-only
+[tests : nosetests]   score: 100
+[tests : nosetests]   Collect and output test names only, don't run any tests.
+[tests : nosetests] 
+[tests : nosetests] Plugin isolation
+[tests : nosetests]   score: 10
+[tests : nosetests]   Activate the isolation plugin to isolate changes to external modules
+[tests : nosetests]   to a single test module or package. The isolation plugin resets the
+[tests : nosetests]   contents of sys.modules after each test module or package runs to
+[tests : nosetests]   its state before the test. PLEASE NOTE that this plugin should not
+[tests : nosetests]   be used with the coverage plugin, or in any other case where module
+[tests : nosetests]   reloading may produce undesirable side-effects.
+[tests : nosetests] 
+[tests : nosetests] Plugin pdb
+[tests : nosetests]   score: 5
+[tests : nosetests]   Provides --pdb and --pdb-failures options that cause the test runner
+[tests : nosetests]   to drop into pdb if it encounters an error or failure, respectively.
+[tests : nosetests] 
+
